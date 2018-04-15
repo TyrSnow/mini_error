@@ -22,6 +22,19 @@ describe('Test user create', () => {
       });
   });
 
+  it('should return 200, when second run', (done) => {
+    request
+      .post('/users')
+      .send({
+        name: 'tianyu',
+      })
+      .expect(200)
+      .end((err, res) => {
+        expect(err).not.exist;
+        done(err);
+      });
+  });
+
   after(() => {
     mongoose.disconnect();
   });
