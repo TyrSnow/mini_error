@@ -1,6 +1,6 @@
-const UserService = require('./service');
+import UserService from './service';
 
-module.exports = {
+export default {
   regist(req, res) {
     let { name } = req.body;
     console.log('controller.regist: ', name);

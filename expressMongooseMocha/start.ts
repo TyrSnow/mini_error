@@ -1,7 +1,8 @@
-const mongoose = require('mongoose');
+import * as mongoose from 'mongoose';
 
 mongoose.connect('mongodb://127.0.0.1:27017/expressMongooseMocah');
-mongoose.Promise = global.Promise;
+
+(<any>mongoose).Promise = global.Promise;
 
 let db = mongoose.connection;
 

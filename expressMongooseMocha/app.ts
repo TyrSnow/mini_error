@@ -1,6 +1,6 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const route = require('./route');
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+import route from './route';
 const app = express();
 require('./start');
 
@@ -15,4 +15,4 @@ process.on('unhandledRejection', (err) => {
   console.error('unhandledRejection: ', err);
 });
 
-module.exports = app;
+export default app;

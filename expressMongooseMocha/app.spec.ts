@@ -1,10 +1,8 @@
-const chai = require('chai');
-require('mocha');
-const mongoose = require('mongoose');
-const supertest = require('supertest');
-const { expect, assert } = chai;
-
-const app = require('./app');
+import { expect, assert } from 'chai';
+import 'mocha';
+import * as supertest from 'supertest';
+import * as mongoose from 'mongoose';
+import app from './app';
 
 const request = supertest(app);
 
